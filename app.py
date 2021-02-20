@@ -10,9 +10,15 @@ def home():
 
 
 @app.route('/udemy')
-def news():
+def udemy():
     if request.method == 'GET':
         return jsonify(getData())
+    
+    
+@app.route('/yts')
+def yts():
+    if request.method == 'GET':
+        return jsonify(getJson(request.args.get('query')))
 
 
 if __name__ == '__main__':
