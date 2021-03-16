@@ -1,5 +1,6 @@
 from flask import jsonify, Flask, request
 from parse import getData
+from info import fun
 from yts import getJson
 import os
 app = Flask(__name__)
@@ -7,6 +8,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
+	info()
     return 'Udemy API is UP!'
 
 
