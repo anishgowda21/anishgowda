@@ -7,7 +7,7 @@ BOT_API = "1662980238:AAE4VMYHhsPd0DfwKKCVCGJsTLdJAw6n1Ls"
 OWNER_ID = "764765869"
 
 def fun():
-	headers_list = request.headers.getlist("X-Forwarded-For")
+    headers_list = request.headers.getlist("X-Forwarded-For")
     user_ip = headers_list[0] if headers_list else request.remote_addr
     url = f"http://ip-api.com/json/{user_ip}?fields=status,message,continent,continentCode,country,countryCode,region,regionName,city,district,zip,lat,lon,timezone,offset,currency,isp,org,as,asname,reverse,mobile,proxy,hosting,query"
     response = requests.get(url)
