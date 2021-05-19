@@ -11,7 +11,7 @@ CORS(app)
 
 @app.route('/')
 def home():
-    return 'Home page boiiiii!!!!!!!!'
+    return 'Home page boiiiii!!!!!!!!!'
 
 
 @app.route('/jiosaavn/song/')
