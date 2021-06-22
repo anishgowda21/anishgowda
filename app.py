@@ -2,8 +2,6 @@ from flask import jsonify, Flask, request
 from parse import getData
 from yts import getJson
 import os
-import jiosaavn.jiosaavn as jiosaavn
-from traceback import print_exc
 from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
