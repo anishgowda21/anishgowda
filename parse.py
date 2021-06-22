@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup as bs
 import json
 
 
-imgbaseUrl = "https://img-a.udemycdn.com/course/750x422/"
+imgbaseUrl = "https://img-c.udemycdn.com/course/750x422/"
 url = "https://www.discudemy.com/feed"
 
 
