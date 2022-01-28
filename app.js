@@ -41,7 +41,7 @@ app.get('/yts',(req,res)=>{
 
 app.get("/adike",(req,res)=>{
     if (req.query.city_id === undefined || req.query.date === undefined){
-        res.end('Please provide a city_id and date\nExample: /areca?city_id=1&date=2020-02');
+        res.end('Please provide a city_id and date\nExample: /adike?city_id=3&date=2021-11');
     }
     else{
         console.log(req.query.city_id,req.query.date);
