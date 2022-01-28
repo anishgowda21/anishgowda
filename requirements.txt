@@ -1,8 +1,0 @@
-beautifulsoup4
-Flask
-lxml
-requests
-urllib3
-bs4
-pyDes
-flask-cors

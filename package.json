@@ -1,0 +1,24 @@
+{
+  "name": "apis",
+  "version": "1.0.0",
+  "description": "A list of diffrent apis",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anishgowda21/anishgowda.git"
+  },
+  "author": "Anish Gowda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anishgowda21/anishgowda/issues"
+  },
+  "homepage": "https://github.com/anishgowda21/anishgowda#readme",
+  "dependencies": {
+    "axios": "^0.25.0",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.2"
+  }
+}

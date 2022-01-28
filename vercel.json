@@ -2,9 +2,9 @@
     "name": "udemyApi",
     "version": 2,
     "builds": [
-        { "src": "*.py", "use": "@liudonghua123/now-flask" }
+        { "src": "./app.js", "use": "@vercel/node" }
     ],
     "routes": [
-        { "src": "(.*)", "dest": "app.py" }
+        { "src": "/(.*)", "dest": "/" }
     ]
 }
