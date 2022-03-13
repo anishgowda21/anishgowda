@@ -42,6 +42,9 @@ async function getNyaaData(query, ord_by, page) {
     const finalArray = await Promise.all(nyaaPromises);
     finalObj = {
       status: "success",
+      query: query,
+      length: finalArray.length,
+      page: page,
       data: finalArray,
     };
     return finalObj;
