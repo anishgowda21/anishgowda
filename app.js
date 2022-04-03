@@ -65,7 +65,8 @@ app.get("/nyaa", (req, res) => {
     var p = req.query.page || 1;
     (async () => {
       try {
-        var data = await nyaa(req.query.query, ob, p);
+        var enQuery = encodeURI(req.query.query);
+        var data = await nyaa(enQuery, ob, p);
         res.setHeader("content-type", "application/json");
         res.status(200).json(data);
       } catch (err) {
