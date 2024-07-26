@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/anishgowda21/anishgowda#readme",
   "dependencies": {
-    "axios": "^0.25.0",
+    "axios": ">=0.28.0",
     "cheerio": "^1.0.0-rc.10",
     "express": "^4.17.2"
   }
