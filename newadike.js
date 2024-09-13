@@ -1,6 +1,5 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const { data } = require('cheerio/lib/api/attributes');
 var qs = require('qs');
 
 var branches = [
