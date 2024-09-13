@@ -3,6 +3,7 @@ const udemy = require("./udemy.js");
 const yts = require("./yts.js");
 const adike = require("./adike.js");
 const nyaa = require("./nyaa.js");
+const newAdike = require("./newadike.js")
 const app = express();
 
 var adike_city_data = {
@@ -35,6 +36,19 @@ app.get("/udemy", (req, res) => {
   })();
 });
 
+app.get("/newAdike", (req, res) => {
+  if (req.query.branch === undefined) {
+    return res.end("Please provide a query\nExample: /newAdike?branch=koppa");
+  }
+
+  console.log(req.query.branch);
+  (async () => {
+    let data = await newAdike(req.query.branch)
+    return res.send(data);
+  })();
+
+})
+
 app.get("/yts", (req, res) => {
   if (req.query.query === undefined) {
     res.end("Please provide a query\nExample: /yts?query=hulk");
@@ -43,7 +57,7 @@ app.get("/yts", (req, res) => {
     (async () => {
       try {
         let image = req.query.img ? true : false
-        var data = await yts(req.query.query,image);
+        var data = await yts(req.query.query, image);
         res.setHeader("content-type", "application/json");
         res.status(200).json(data);
       } catch (err) {
