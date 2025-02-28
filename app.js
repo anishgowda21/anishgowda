@@ -59,7 +59,7 @@ app.get("/yts", (req, res) => {
         let image = req.query.img ? true : false
         var data = await yts(req.query.query, image);
         res.setHeader("content-type", "application/json");
-        if (data.status==="okay"){
+        if (data.status==="ok"){
         res.status(200).json(data);
           return;
         }
