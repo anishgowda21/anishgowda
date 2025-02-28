@@ -42,27 +42,27 @@ async function getMovieData(query, cimage) {
             const torrents = await Promise.all(
                 (movie.torrents || []).map(async (torr) => {
                     const torrentObj = {
-                        torrent_file: torr.url || null,
-                        magnet: torr.hash ? buildMagnet(torr.hash) : null,
-                        quality: torr.quality || null,
-                        type: torr.type || null,
-                        seeds: torr.seeds || null,
-                        peers: torr.peers || null,
-                        size: torr.size || null,
-                        upload_date: torr.date_uploaded || null,
-                        hash: torr.hash || null
+                        torrent_file: torr.url || "",
+                        magnet: torr.hash ? buildMagnet(torr.hash) : "",
+                        quality: torr.quality || "",
+                        type: torr.type || "",
+                        seeds: torr.seeds || 0,
+                        peers: torr.peers || 0,
+                        size: torr.size || "",
+                        upload_date: torr.date_uploaded || "",
+                        hash: torr.hash || "",
                     };
                     return torrentObj;
                 })
             );
 
             return {
-                name: movie.title_long || null,
-                cover_image: coverImage,
-                description: movie.synopsis || null,
-                imdb: movie.imdb_code || null,
-                year: movie.year || null,
-                language: movie.language || null,
+                name: movie.title_long || "",
+                cover_image: coverImage || "",
+                description: movie.synopsis || "",
+                imdb: movie.imdb_code || "",
+                year: movie.year || 0,
+                language: movie.language || "",
                 torrents
             };
         });
