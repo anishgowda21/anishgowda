@@ -96,14 +96,15 @@ async function search(
 
 async function getDetails(link) {
   const url = `${BASE_URL}${link}`;
-  try {
-    const response = await axios.get(url, {
-      headers: {
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
-      },
-    });
-    const $ = cheerio.load(response.data);
+  // try {
+  //   const response = await axios.get(url, {
+  //     headers: {
+  //       "User-Agent":
+  //         "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+  //     },
+  //   });
+    const res = await cloudscraper.get(url);
+    const $ = cheerio.load(res);
 
     const name = $(".box-info-heading h1").text().trim() || "Unknown";
     const magnet =
