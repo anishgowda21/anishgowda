@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/anishgowda21/anishgowda#readme",
   "dependencies": {
+    "@upstash/redis": "^1.34.4",
     "axios": ">=0.28.0",
     "cheerio": "^1.0.0-rc.10",
-    "express": "^4.17.2",
     "cloudscraper": "^4.6.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.17.2",
     "marked": "^15.0.7"
   }
 }

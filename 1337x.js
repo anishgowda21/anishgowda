@@ -65,13 +65,13 @@ async function search(
         const date = $(tds[3]).text() || "Unknown";
         const size = $(tds[4]).contents().first().text() || "Unknown";
         return {
+          query,
           name,
           link,
           seeds,
           leeches,
           date,
           size,
-          category: category || "All",
         };
       });
 
@@ -84,7 +84,7 @@ async function search(
       },
       filters: {
         category: category || "All",
-        sort: sort || null,
+        sort: sort || "seeders",
         order,
       },
     };
