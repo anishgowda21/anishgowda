@@ -9,6 +9,7 @@ const nyaa = require("./nyaa.js");
 const newAdike = require("./newadike.js");
 const _1337x = require("./1337x.js");
 const app = express();
+app.use(express.static("public"));
 
 var adike_city_data = {
   2: "Birur",
