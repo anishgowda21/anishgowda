@@ -19,6 +19,7 @@
   "dependencies": {
     "axios": ">=0.28.0",
     "cheerio": "^1.0.0-rc.10",
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "marked": "^15.0.7"
   }
 }
