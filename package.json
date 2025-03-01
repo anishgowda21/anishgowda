@@ -20,6 +20,7 @@
     "axios": ">=0.28.0",
     "cheerio": "^1.0.0-rc.10",
     "express": "^4.17.2",
+    "cloudscraper": "^4.6.0",
     "marked": "^15.0.7"
   }
 }
