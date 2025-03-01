@@ -65,7 +65,6 @@ async function search(
         const date = $(tds[3]).text() || "Unknown";
         const size = $(tds[4]).contents().first().text() || "Unknown";
         return {
-          query,
           name,
           link,
           seeds,
@@ -78,6 +77,7 @@ async function search(
     return {
       results,
       pagination: {
+        query,
         currentPage: parseInt(page),
         lastPage,
         perPageResults: results.length,
